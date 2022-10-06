@@ -1,0 +1,23 @@
+<html>
+    <head> <title> Sistema de control de Ingreso </title>
+    <body>
+        <H1> Mantenimiento de cargos </H1>
+        <HR>
+        <P><A HREF=/m_cargos_nuevo>Nuevo Cargo</A> </P>
+        <TABLE BORDER=1>
+            <TR><TH>ID</TH>
+                <TH>NOMBRE</TH>
+                <TH>SUELDO</TH>
+                <TH COLSPAN=2>ACCIONES</TH>
+            </TR>
+            <% records.forEach( function( cargo ) { %>
+                <TR><TD> <%= cargo._id %> </TD>
+                    <TD> <%= cargo.nombre %> </TD>
+                    <TD> <%= cargo.sueldo %> </TD>
+                    <TD><A HREF=/m_cargos_editar/<%= cargo._id %>>Editar</A></TD>
+                    <TD><A HREF=/m_cargos_eliminar/<%= cargo._id %>>Eliminar</A></TD>
+                </TR>
+            <% }); %>
+        </TABLE>
+    </body>
+</html>

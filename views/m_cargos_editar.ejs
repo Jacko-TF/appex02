@@ -1,0 +1,18 @@
+<html>
+    <head><title> Sistema de control de Ingreso </title>
+    <body>
+        <H1> Editar cargo </H1>
+        <form method=post action=/m_cargos_grabar_editar>
+            <input type=hidden name=xid id=xid value=<%= cargo._id%>>
+            <table border=0>
+                <tr><td>Nombre:</td><td><input type=text name=xnom
+                    id=xnom size=30
+                    value='<%= cargo.nombre%>'></td></tr>
+                <tr><td>Sueldo:</td><td><input type=number name=xsue
+                    id=xsue size=10
+                    value='<%= cargo.sueldo%>'></td></tr>
+                <tr><td></td><td><input type = submit value= Grabar></td></tr>
+            </table>
+        </form>
+    </body>
+</html>

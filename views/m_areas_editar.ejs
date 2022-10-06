@@ -1,0 +1,21 @@
+<html>
+    <head><title> Sistema de control de Ingreso </title>
+    <body>
+        <H1> Editar Area </H1>
+        <form method=post action=/m_areas_grabar_editar>
+            <input type=hidden name=xid id=xid value=<%= area._id%>>
+            <table border=0>
+                <tr><td>Nombre:</td><td><input type=text name=xnom
+                    id=xnom size=30
+                    value='<%= area.Nombre%>'></td></tr>
+                <tr><td>Abreviatura:</td><td><input type=text name=xabre
+                    id=xabre size=30
+                    value='<%= area.Abreviatura%>'></td></tr>
+                <tr><td>Estado:</td><td><input type=text name=xest
+                    id=xest size=30
+                    value='<%= area.Estado%>'></td></tr>
+                <tr><td></td><td><input type = submit value= Grabar></td></tr>
+            </table>
+        </form>
+    </body>
+</html>
